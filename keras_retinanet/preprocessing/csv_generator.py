@@ -168,7 +168,7 @@ class CSVGenerator(Generator):
     def num_classes(self):
         """ Number of classes in the dataset.
         """
-        return max(self.classes.values()) + 1
+        return 2
 
     def has_label(self, label):
         """ Return True if label is a known label.
