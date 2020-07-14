@@ -16,7 +16,7 @@ limitations under the License.
 
 import tensorflow as tf
 from tensorflow.keras.utils import get_file
-import keras_resnet
+import tf.keras.applications
 import keras_resnet.models
 
 from . import retinanet
@@ -96,7 +96,7 @@ def resnet_retinanet(num_classes, backbone='resnet50', inputs=None, modifier=Non
 
     # create the resnet backbone
     if backbone == 'resnet50':
-        resnet = keras_resnet.models.ResNet50(inputs, include_top=False, trainable_bn=False)
+        resnet = tf.keras.applications.ResNet50(inputs, include_top=False, trainable_bn=False)
     elif backbone == 'resnet101':
         resnet = keras_resnet.models.ResNet101(inputs, include_top=False, trainable_bn=False)
     elif backbone == 'resnet152':
