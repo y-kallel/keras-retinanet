@@ -16,7 +16,7 @@ limitations under the License.
 
 import tensorflow as tf
 from tensorflow.keras.utils import get_file
-import tf.keras.applications
+import tensorflow.keras.applications
 import keras_resnet.models
 
 from . import retinanet
