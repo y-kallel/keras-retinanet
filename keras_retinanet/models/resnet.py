@@ -112,7 +112,7 @@ def resnet_retinanet(num_classes, backbone='resnet50', inputs=None, modifier=Non
     print("#############################################")
     print(resnet.outputs)
     print("#############################################")
-    return retinanet.retinanet(inputs=inputs, num_classes=num_classes, backbone_layers=resnet.outputs, **kwargs)
+    return retinanet.retinanet(inputs=inputs, num_classes=num_classes, backbone_layers=resnet.outputs[1:], **kwargs)
 
 
 def resnet50_retinanet(num_classes, inputs=None, **kwargs):
